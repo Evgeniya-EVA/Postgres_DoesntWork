@@ -3,20 +3,13 @@ version: '3.7'
 services:
   postgresql:
     image: postgres:12.0-alpine
-    volumes:
-      - //c/docker/data:/var/lib/postgres/data
     ports:
       - '5432:5432'
     environment:
+  #     PGDATA: /var/lib/postgresql/data
        POSTGRES_RANDOM_ROOT_PASSWORD: 'yes'
        POSTGRES_DATABASE: app
        POSTGRES_USER: app
        POSTGRES_PASSWORD: pass123
-
-  node-app:
-    build: .
-    image: node-app:1.0
-    ports:
-      - '9999:9999'
-    volumes:
-      - ./node:/var/lib/node_data
+ #   volumes:
+ #     - //c/docker/data:/var/lib/postgresql/data

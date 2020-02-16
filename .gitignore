@@ -27,6 +27,17 @@ out/
 /nbdist/
 /.nb-gradle/
 
+*
+
+.gitignore
+Dockerfile
+README.md
+gradlew
+gradlew.bat
+package-lock.json
+package.json
+settings.gradle
+
 ### VS Code ###
 .vscode/
 
@@ -38,10 +49,9 @@ out/
 *.zip
 *.tar.gz
 *.rar
+*.js
 
 ### Exclusions ###
-!gradle/wrapper/gradle-wrapper.jar
-!**/src/main/**
-!**/src/test/**
+!docker-compose.yml
+!application.properties
 !db-api.jar
-!db-api-for-docker.jar
